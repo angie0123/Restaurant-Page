@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --bg-color: #f3e8d3;
+  font-family: "Unica One", cursive;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: 1.5rem;
+}
+
+.title div {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1.3rem;
+  font-weight: bold;
+}
+
+body {
+  height: 100vh;
+  background: var(--bg-color);
+  padding: 18px;
+}
+.main {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  color: var(--bg-color);
+  padding: 23px;
+}
