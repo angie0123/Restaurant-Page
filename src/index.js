@@ -1,1 +1,3 @@
-console.log("hello connected");
+import Home from "./home.js";
+
+Home();
