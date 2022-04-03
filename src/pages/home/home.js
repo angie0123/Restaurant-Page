@@ -1,10 +1,9 @@
+import "./styles.css";
+
 export default function () {
   const content = document.getElementById("content");
-  console.log(content);
 
-  content.appendChild(title());
-  content.appendChild(about());
-
+  content.appendChild(main());
   return content;
 }
 
@@ -22,6 +21,16 @@ const title = () => {
   title.appendChild(div);
 
   return title;
+};
+
+const main = () => {
+  const main = document.createElement("div");
+  main.classList.add("main");
+
+  main.appendChild(title());
+  main.appendChild(about());
+
+  return main;
 };
 
 const about = () => {
