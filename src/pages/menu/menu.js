@@ -55,9 +55,7 @@ export default function () {
   menu.classList.add("menu");
 
   menu.appendChild(title());
-  menu.appendChild(createDiv("main", mainDishes));
-  menu.appendChild(createDiv("sides", sideDishes));
-  menu.appendChild(createDiv("desserts", desserts));
+  menu.appendChild(gridContainer());
 
   return menu;
 }
@@ -69,8 +67,18 @@ const title = () => {
   return title;
 };
 
+const gridContainer = () => {
+  const grid = document.createElement("div");
+  grid.classList.add("menu-grid");
+  grid.appendChild(createDiv("main", mainDishes));
+  grid.appendChild(createDiv("sides", sideDishes));
+  grid.appendChild(createDiv("desserts", desserts));
+  return grid;
+};
+
 const createDiv = (name, dishes) => {
   const body = document.createElement("div");
+  body.classList.add("menu-section");
   const heading = document.createElement("div");
   heading.classList.add("heading");
   heading.textContent = name;
@@ -86,7 +94,6 @@ const createDiv = (name, dishes) => {
     item.appendChild(name);
 
     const description = document.createElement("div");
-    description.classList.add("description");
     description.textContent = dish.description;
 
     const price = document.createElement("span");

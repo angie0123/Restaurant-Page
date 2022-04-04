@@ -3,13 +3,15 @@
   padding: 0;
   box-sizing: border-box;
   --bg-color: #f3e8d3;
-  font-family: "Unica One", cursive;
+  --main-font: "Unica One", cursive;
+  --secondary-font: "Spectral", serif;
 }
 
 body {
   height: 100vh;
   background: var(--bg-color);
   padding: 18px;
+  font-family: var(--main-font);
 }
 
 .main {
