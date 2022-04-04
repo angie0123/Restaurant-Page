@@ -2,6 +2,7 @@ import "./styles.css";
 
 export default function () {
   const home = document.createElement("div");
+  home.classList.add("home");
   home.appendChild(title());
   home.appendChild(about());
   return home;
