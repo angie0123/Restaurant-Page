@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --bg-color: #f3e8d3;
+  font-family: "Unica One", cursive;
+}
+
+body {
+  height: 100vh;
+  background: var(--bg-color);
+  padding: 18px;
+}

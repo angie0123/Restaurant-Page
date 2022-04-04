@@ -1,3 +1,4 @@
-import Home from "./pages/home/home.js";
+import Body from "./components/body/body.js";
 
-Home();
+const body = document.querySelector("body");
+body.appendChild(Body());

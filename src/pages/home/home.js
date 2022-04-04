@@ -1,10 +1,10 @@
 import "./styles.css";
 
 export default function () {
-  const content = document.getElementById("content");
-
-  content.appendChild(main());
-  return content;
+  const home = document.createElement("div");
+  home.appendChild(title());
+  home.appendChild(about());
+  return home;
 }
 
 const title = () => {
@@ -21,16 +21,6 @@ const title = () => {
   title.appendChild(div);
 
   return title;
-};
-
-const main = () => {
-  const main = document.createElement("div");
-  main.classList.add("main");
-
-  main.appendChild(title());
-  main.appendChild(about());
-
-  return main;
 };
 
 const about = () => {
