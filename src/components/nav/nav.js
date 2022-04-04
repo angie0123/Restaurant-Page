@@ -2,11 +2,14 @@ import "./styles.css";
 import home from "../../pages/home/home.js";
 
 export default function () {
+  const navContainer = document.createElement("div");
+  navContainer.classList.add("nav-container");
   const nav = document.createElement("nav");
 
   const ul = linkList(["home", "menu", "contact"]);
   nav.appendChild(ul);
-  return nav;
+  navContainer.appendChild(nav);
+  return navContainer;
 }
 
 const linkList = (linkNames) => {

@@ -11,3 +11,20 @@ body {
   background: var(--bg-color);
   padding: 18px;
 }
+
+.main {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  justify-items: center;
+  color: var(--bg-color);
+}
+
+#content {
+  padding: 23px;
+}
