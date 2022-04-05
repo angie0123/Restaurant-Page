@@ -18,17 +18,21 @@ const body = () => {
   const body = document.createElement("div");
   body.classList.add("contact-body");
   body.appendChild(contactForm());
-  // body.appendChild(address());
+  body.appendChild(address());
   return body;
 };
 
 const contactForm = () => {
+  const formDiv = document.createElement("div");
+  formDiv.classList.add("form-container");
+
   const contactForm = document.createElement("form");
-  contactForm.classList.add("form");
+  formDiv.appendChild(contactForm);
+
   const heading = document.createElement("div");
   heading.textContent = "We'd love to hear from you";
 
-  contactForm.appendChild(heading);
+  formDiv.appendChild(heading);
 
   const nameLabel = document.createElement("label");
   nameLabel.textContent = "Name";
@@ -87,5 +91,29 @@ const contactForm = () => {
 
   contactForm.appendChild(button);
 
-  return contactForm;
+  return formDiv;
+};
+
+const address = () => {
+  const address = document.createElement("div");
+  address.classList.add("address");
+
+  appendAsSpan(address, [
+    "Central Park",
+    "92 Clear St",
+    "Toronto, ON F8S 4J2",
+    "XXX-XXX-XXXX",
+    "New location downtown coming soon!",
+  ]);
+
+  return address;
+};
+
+const appendAsSpan = (item, listToAppend) => {
+  for (let text of listToAppend) {
+    const span = document.createElement("span");
+    span.textContent = text;
+
+    item.appendChild(span);
+  }
 };
