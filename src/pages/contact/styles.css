@@ -1,0 +1,97 @@
+.contact {
+  text-transform: capitalize;
+  margin-top: 20%;
+}
+
+.contact h1 {
+  margin: 0 -23px;
+  font-size: 3.5rem;
+  padding: 25px;
+}
+
+.contact-body {
+  background: rgba(0, 0, 0, 0.8);
+  margin: 0 -23px;
+  padding: 50px 0;
+  font-size: 1.2rem;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 2fr;
+}
+
+.contact-body div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-body > div:first-child {
+  justify-content: start;
+  align-items: center;
+}
+
+input {
+  all: unset;
+}
+
+button {
+  all: unset;
+}
+
+form div {
+  width: 70%;
+  margin-bottom: 20px;
+}
+form label {
+  display: block;
+  font-weight: bold;
+}
+form input {
+  display: block;
+  width: 100%;
+  padding: 3px;
+  background: white;
+  box-sizing: border-box;
+}
+
+textarea#message {
+  width: 100%;
+  height: 100px;
+  padding: 3px;
+  font-size: 1.2rem;
+  font-family: inherit;
+  border: none;
+  overflow: auto;
+  outline: none;
+  resize: none;
+  box-shadow: none;
+}
+
+button {
+  padding: 6px;
+  background: violet;
+  border-radius: 2px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: black;
+}
+
+button:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.contact-body .form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-body .address span {
+  margin: 10px 0;
+}
+
+.contact-body .address span:last-child {
+  margin: 30px 0;
+}

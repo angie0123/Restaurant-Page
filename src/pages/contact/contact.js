@@ -1,3 +1,5 @@
+import "./styles.css";
+
 export default function () {
   const contact = document.createElement("div");
   contact.classList.add("contact");
@@ -17,6 +19,9 @@ const heading = () => {
 const body = () => {
   const body = document.createElement("div");
   body.classList.add("contact-body");
+  const heading = document.createElement("div");
+  heading.textContent = "We'd love to hear from you!";
+  body.appendChild(heading);
   body.appendChild(contactForm());
   body.appendChild(address());
   return body;
@@ -27,12 +32,6 @@ const contactForm = () => {
   formDiv.classList.add("form-container");
 
   const contactForm = document.createElement("form");
-  formDiv.appendChild(contactForm);
-
-  const heading = document.createElement("div");
-  heading.textContent = "We'd love to hear from you";
-
-  formDiv.appendChild(heading);
 
   const nameLabel = document.createElement("label");
   nameLabel.textContent = "Name";
@@ -90,6 +89,7 @@ const contactForm = () => {
   button.textContent = "Send";
 
   contactForm.appendChild(button);
+  formDiv.appendChild(contactForm);
 
   return formDiv;
 };
