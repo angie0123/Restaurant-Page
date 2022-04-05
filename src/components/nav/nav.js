@@ -1,6 +1,7 @@
 import "./styles.css";
 import Home from "../../pages/home/home.js";
 import Menu from "../../pages/menu/menu";
+import Contact from "../../pages/contact/contact";
 
 export default function () {
   const navContainer = document.createElement("div");
@@ -37,6 +38,12 @@ const changeContent = (link) => {
 
     case "menu":
       content.replaceChildren(Menu());
+      break;
+
+    case "contact":
+      content.replaceChildren(Contact());
+      break;
+
     default:
       break;
   }
